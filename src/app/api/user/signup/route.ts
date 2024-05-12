@@ -40,7 +40,7 @@ export async function POST(request:NextRequest){
             message:"User Registerd Successfully",
             success:true,
 
-        })
+        }) 
 
 
     } catch (error:any) {
