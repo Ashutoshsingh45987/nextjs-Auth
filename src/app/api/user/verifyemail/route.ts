@@ -1,8 +1,6 @@
 import {connect} from '@/dbConfig/dbConfig';
 import User from '@/models/usermodel';
-import { trackDynamicDataAccessed } from 'next/dist/server/app-render/dynamic-rendering';
 import {NextRequest,NextResponse} from 'next/server'
-import { use } from 'react';
 
 connect();
 
