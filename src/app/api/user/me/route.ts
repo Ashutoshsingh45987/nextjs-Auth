@@ -13,6 +13,7 @@ export async function POST( request:NextRequest){
     try {
         // get the datat from the tokem 
         const userId = await getDatafromToken(request);
+        console.log(userId);
 
         const user= await User.findOne({_id:userId}).select("-password");
 

@@ -3,6 +3,7 @@ import User from "@/models/usermodel";
 import { NextRequest,NextResponse } from "next/server";
 import bcryptjs from 'bcryptjs';
 import jwt from 'jsonwebtoken'
+import { types } from "util";
 
 
 
@@ -37,6 +38,7 @@ export async function POST(request:NextRequest){
         }
 
         const token = await jwt.sign(tokenData,process.env.TOKEN_SECRET!,{expiresIn:'3d'});
+        console.log(typeof token);
 
         const response =  NextResponse.json({message:"User Logged in Successfully",success:true});
 
